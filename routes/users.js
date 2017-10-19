@@ -8,33 +8,36 @@ module.exports = app => {
         .post((req, res) => {
             usersController.save(req.body)
                 .then((response) => {
-                    res.status(response.statusCode);
-                    res.json(response.data);
-                });
+                    res.status(response.statusCode)
+                    res.json(response.data)
+                })
         })
 
     app.route('/users/:email')
         .get((req, res) => {
             usersController.getbyEmail({
-                local: {
-                    email: req.params.email
-                }
+                email: req.params.email
             })
                 .then((response) => {
-                    res.status(response.statusCode);
-                    res.json(response.data);
-                });
+                    res.status(response.statusCode)
+                    res.json(response.data)
+                })
 
         })
         .put((req, res) => {
             usersController.update(req.params, req.body)
                 .then((response) => {
-                    res.status(response.statusCode);
-                    res.json(response.data);
-                });
+                    res.status(response.statusCode)
+                    res.json(response.data)
+                })
         })
         .delete((req, res) => {
-            // usersController.disable(req.params)
-            //     .then(response => res.sendStatus(response.statusCode));
-        });
+            usersController.delete({
+                email: req.params.email
+            })
+                .then((response) => {
+                    res.status(response.statusCode)
+                    res.json(response.data)
+                })
+        })
 }
