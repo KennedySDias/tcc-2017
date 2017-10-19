@@ -1,9 +1,9 @@
-import mongoose from 'mongoose'
-import Users from '../models/users'
+const mongoose = require('mongoose')
+const Users = require('../models/users')
 
 let dataBase = null
 
-export default app => {
+module.exports = app => {
 
     if (!dataBase){
 

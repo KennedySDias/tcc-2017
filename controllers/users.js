@@ -1,4 +1,4 @@
-import HttpStatus from 'http-status';
+const HttpStatus = require('http-status')
 
 const defaultResponse = (data, statusCode = HttpStatus.OK ) => ({
     data,
@@ -40,4 +40,4 @@ class UsersController {
 
     // delete()
 }
-export default UsersController
+module.exports = UsersController

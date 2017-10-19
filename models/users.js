@@ -1,4 +1,4 @@
-export default mongoose => mongoose.model('users', new mongoose.Schema({
+module.exports = mongoose => mongoose.model('users', new mongoose.Schema({
     name: {
         type: String
     },

@@ -1,6 +1,6 @@
-import UsersController from '../controllers/users';
+const UsersController = require('../controllers/users')
 
-export default app => {
+module.exports = app => {
 
     const usersController = new UsersController(app.dataSource.models.Users)
 
@@ -13,7 +13,7 @@ export default app => {
                 });
         })
 
-    app.route('/users:email')
+    app.route('/users/:email')
         .get((req, res) => {
             usersController.getbyEmail({
                 local: {

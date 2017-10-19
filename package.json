@@ -4,7 +4,8 @@
   "description": "tcc-2017",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node es5/index.js",
+    "start": "node index.js",
+    "start_old": "npm run build && node es5/index.js",
     "build": "rm -rf es5 && mkdir es5 && babel es6 -d es5"
   },
   "repository": {
