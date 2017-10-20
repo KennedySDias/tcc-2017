@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start_old": "npm run build && node es5/index.js",
-    "build": "rm -rf es5 && mkdir es5 && babel es6 -d es5"
+    "test": "mocha --opts test/mocha.opts test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,7 @@
     "mongoose": "^4.12.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0"
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
   }
 }
