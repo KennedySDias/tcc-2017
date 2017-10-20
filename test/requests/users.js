@@ -1,65 +1,81 @@
+const HTTP = require('http')
+
 describe('Routes Users', () => {
 
-    const Users = app.dataSource.models.Users
-    const defaultUser = {
+    const TIMES = 10
+    const URL = 'http://localhost:3000'
+    const USERS = app.dataSource.models.Users
+
+    let defaultUser = {
         name: 'Name Default',
         email: 'email@default.com.br'
     }
 
-    before(() => Users
-        .remove({})
-        .then(() => Users.create(defaultUser)))
+    before(() => USERS
+        .remove({}))
 
-    describe('Routes /users/', () =>
-        it('POST - Create a new user', done => {
-            const defaultUser2 = {
-                name: 'Name Default',
-                email: 'email@default.com.br'
-            }
+    for (i = 0 ; i < TIMES ; i++) {
 
-            request
-                .post('/users')
-                .send(defaultUser2)
-                .end((err, res) => {
-                    if (err) done(err)
-                    else done()
-                })
+        const user = {
+            name: `${defaultUser.name} ${i}`,
+            email: `${i}${defaultUser.email}`
+        }
+        const email = `${i}${defaultUser.email}`
+
+        describe('Routes /users/', () =>
+            it('POST - Create a new user', done => {
+                request
+                    .post(`/users`)
+                    .send(user)
+                    .end((err, res) => {
+                        if (err) done(err)
+                        else done()
+                    })
+            })
+        )
+
+        describe('Routes /users/:email', () => {
+            it('GET - Find a user by email', done => {
+                HTTP.get(`${URL}/users/${email}`, res =>
+                    res.on('data', chunk =>
+                        done()
+                    )
+                ).on("error", e => done(e));
+            })
+
+            it('PUT - Update a user by email', done => {
+
+                let userUpdated = {
+                    name: 'Name updated'
+                }
+
+                
+                request
+                    .put(`/users/:${email}`)
+                    .send(userUpdated)
+                    .end((err, res) => {
+                        if (err) done(err)
+                        else done()
+                    })
+            })
+
+            it('DELETE - Remove a user by email', done => {
+                request
+                    .delete(`/users/:${email}`)
+                    .end((err, res) => {
+                        if (err) done(err)
+                        else done()
+                    })
+            })
         })
-    )
 
-    describe('Routes /users/:email', () => {
-        it('GET - Find a user by email', done => {
-            const email = 'email@default.com.br'
-            request
-                .get(`/users/:${email}`)
-                .end((err, res) => {
-                    if (err) done(err)
-                    else done()
-                })
-        })
-
-        it('PUT - Update a user by email', done => {
-            const email = 'email@default.com.br'
-            const defaultUser = {
-                name: 'Name Default',
-                email: 'email@default.com.br'
-            }
-            request
-                .get(`/users/:${email}`)
-                .send(defaultUser)
-                .end((err, res) => {
-                    if (err) done(err)
-                    else done()
-                })
-        })
-    })
-
+    }
 
     /*
 
 
     describe('Route GET /users', () => {
-        it('Retorna uma lista de Users', (done) => {
+        it('Retorna uma lista de USERS', (done) => {
             request
                 .get('/users')
                 .end((err, res) => {
