@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "mocha": "^4.0.1",
+    "os-utils": "0.0.14",
+    "requestify": "^0.2.5",
     "supertest": "^3.0.0"
   }
 }
