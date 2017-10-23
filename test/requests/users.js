@@ -1,17 +1,9 @@
 const requestfy = require('requestify')
 const os = require('os-utils')
 
-function medirHardware(label) {
-    console.log(label)
-    os.cpuUsage(function(v){
-        console.log( 'CPU usada:', v * 100, "%" );
-    });
-    console.log( 'Memória usada:', (os.totalmem() - os.freemem()) * 100 / os.totalmem(), " %" );
-
-}
 describe('Routes Users', () => {
 
-    console.time("Testes")
+    console.time("Tempo de execução dos testes: ")
 
     const TIMES = 100
     const URL = 'http://localhost:3000'
@@ -26,9 +18,8 @@ describe('Routes Users', () => {
         .remove({}))
 
     // POST
-    medirHardware("POST")
     for (i = 0 ; i < TIMES ; i++) {
-
+console.log("POST:",i)
         let user = {
             name: `${defaultUser.name} ${i}`,
             email: `${i}${defaultUser.email}`
@@ -45,8 +36,8 @@ describe('Routes Users', () => {
     }
 
     // GET
-    medirHardware("GET")
     for (i = 0 ; i < TIMES ; i++) {
+        console.log("GET:",i)
 
         let email = `${i}${defaultUser.email}`
 
@@ -62,8 +53,8 @@ describe('Routes Users', () => {
     }
 
     // PUT
-    medirHardware("PUT")
     for (i = 0 ; i < TIMES ; i++) {
+        console.log("PUT:",i)
 
         let email = `${i}${defaultUser.email}`
 
@@ -83,8 +74,8 @@ describe('Routes Users', () => {
     }
 
     // DELETE
-    medirHardware("DELETE")
     for (i = 0 ; i < TIMES ; i++) {
+        console.log("DELETE:",i)
 
         let email = `${i}${defaultUser.email}`
 
@@ -99,5 +90,5 @@ describe('Routes Users', () => {
 
     }
 
-    console.timeEnd("Testes")
+    console.timeEnd("Tempo de execução dos testes: ")
 });
