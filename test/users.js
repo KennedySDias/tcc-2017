@@ -1,4 +1,4 @@
-const requestfy = require('requestify')
+const requestify = require('requestify')
 const app = require('../app')
 
 const times = 100
@@ -12,50 +12,88 @@ users
 
         console.time("Tempo de execução dos testes: ")
 
+        let promisses = []
         let defaultUser = {
             name: 'Kennedy de Souza Dias',
             email: 'kennedysouzadias@gmail.com'
         }
 
         console.log(`POST - Cria ${times} usuários`)
+        promisses = []
         for (i = 0 ; i < times ; i++) {
 
             let user = {
-                name: `${defaultUser.name} ${i}`,
-                email: `${i}${defaultUser.email}`
-            }
+                    name: `${defaultUser.name} ${i}`,
+                    email: `${i}${defaultUser.email}`
+                },
+                email = `${i}${defaultUser.email}`
 
-            requestfy.post(`${url}/users`, user)
+            promisses.push(new Promise( (resolve, reject) => {
+
+                requestify.post(`${url}/users`, user)
+                    .then( () => {
+                        resolve()
+                    })
+            }))
         }
+        Promise.all(promisses)
+            .then( () => {
 
-        console.log(`GET - Pesquisa ${times} usuários pelo e-mail`)
-        for (i = 0 ; i < times ; i++) {
+                console.log(`\tGET - Pesquisa ${times} usuários pelo e-mail`)
+                promisses = []
+                for (i = 0 ; i < times ; i++) {
 
-            let email = `${i}${defaultUser.email}`
+                    let email = `${i}${defaultUser.email}`
 
-            requestfy.get(`${url}/users/${email}`)
-        }
+                    promisses.push(new Promise( (resolve, reject) => {
+                        requestify.get(`${url}/users/${email}`)
+                            .then( () => {
+                                resolve()
+                            })
+                    }))
+                }
+                Promise.all(promisses)
+                    .then( () => {
 
-        console.log(`PUT - Atualiza ${times} usuários pelo e-mail`)
-        for (i = 0 ; i < times ; i++) {
+                        console.log(`\t\tPUT - Atualiza ${times} usuários pelo e-mail`)
+                        promisses = []
+                        for (i = 0 ; i < times ; i++) {
 
-            let email = `${i}${defaultUser.email}`
-            let userUpdated = {
-                name: 'Kennedy de Souza Dias Atualizado'
-            }
+                            let email = `${i}${defaultUser.email}`,
+                                userUpdated = {
+                                    name: 'Kennedy de Souza Dias Atualizado'
+                                }
 
-            requestfy.put(`${url}/users/${email}`, userUpdated)
-        }
+                            promisses.push(new Promise( (resolve, reject) => {
+                                requestify.put(`${url}/users/${email}`, userUpdated)
+                                    .then( () => {
+                                        resolve()
+                                    })
+                            }))
+                        }
+                        Promise.all(promisses)
+                            .then( () => {
 
-        console.log(`DELETE - Deleta ${times} usuários pelo e-mail`)
-        for (i = 0 ; i < times ; i++) {
+                                console.log(`\t\t\tDELETE - Deleta ${times} usuários pelo e-mail`)
+                                promisses = []
+                                for (i = 0 ; i < times ; i++) {
 
-            let email = `${i}${defaultUser.email}`
+                                    let email = `${i}${defaultUser.email}`
 
-            requestfy.delete(`${url}/users/${email}`)
-        }
+                                    promisses.push(new Promise( (resolve, reject) => {
+                                        requestify.delete(`${url}/users/${email}`)
+                                            .then( () => {
+                                                resolve()
+                                            })
+                                    }))
+                                }
+                                Promise.all(promisses)
+                                    .then( () => {
 
-        console.timeEnd("Tempo de execução dos testes: ")
-
-        process.exit()
+                                        console.timeEnd("Tempo de execução dos testes: ")
+                                        process.exit()
+                                    })
+                            })
+                    })
+            })
     })
