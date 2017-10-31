@@ -1,29 +1,28 @@
-const os = require('os')
 const fs = require('fs')
 const UsersController = require('../controllers/users')
 
-let countPost = 0;
+// let countPost = 0;
 function registerPost(memory) {
-    countPost++
-    fs.appendFileSync('registrosMemoriaPost.txt', `${countPost} - ${memory}\n`)
+    // countPost++
+    fs.appendFileSync('registrosMemoriaPost.txt', `${memory}\n`)
 }
 
-let countGet = 0;
+// let countGet = 0;
 function registerGet(memory) {
-    countGet++
-    fs.appendFileSync('registrosMemoriaGet.txt', `${countGet} - ${memory}\n`)
+    // countGet++
+    fs.appendFileSync('registrosMemoriaGet.txt', `${memory}\n`)
 }
 
-let countPut = 0;
+// let countPut = 0;
 function registerPut(memory) {
-    countPut++
-    fs.appendFileSync('registrosMemoriaPut.txt', `${countPut} - ${memory}\n`)
+    // countPut++
+    fs.appendFileSync('registrosMemoriaPut.txt', `${memory}\n`)
 }
 
-let countDelete = 0;
+// let countDelete = 0;
 function registerDelete(memory) {
-    countDelete++
-    fs.appendFileSync('registrosMemoriaDelete.txt', `${countDelete} - ${memory}\n`)
+    // countDelete++
+    fs.appendFileSync('registrosMemoriaDelete.txt', `${memory}\n`)
 }
 
 module.exports = app => {
@@ -33,7 +32,7 @@ module.exports = app => {
         .post((req, res) => {
 
             // console.log('/users - POST');
-            registerPost(os.totalmem() - os.freemem());
+            registerPost(process.memoryUsage().rss);
 
             usersController.save(req.body)
                 .then((response) => {
@@ -46,7 +45,7 @@ module.exports = app => {
         .get((req, res) => {
 
             // console.log(`/users/${req.params.email} - GET: `);
-            registerGet(os.totalmem() - os.freemem());
+            registerGet(process.memoryUsage().rss);
 
             usersController.getbyEmail({
                 email: req.params.email
@@ -60,7 +59,7 @@ module.exports = app => {
         .put((req, res) => {
 
             // console.log(`/users/${req.params.email} - PUT: `);
-            registerPut(os.totalmem() - os.freemem());
+            registerPut(process.memoryUsage().rss);
 
             usersController.update(req.params, req.body)
                 .then((response) => {
@@ -71,7 +70,7 @@ module.exports = app => {
         .delete((req, res) => {
 
             // console.log(`/users/${req.params.email} - DELETE: `);
-            registerDelete(os.totalmem() - os.freemem());
+            registerDelete(process.memoryUsage().rss);
 
             usersController.delete({
                 email: req.params.email

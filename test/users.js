@@ -1,7 +1,8 @@
+const fs = require('fs')
 const requestify = require('requestify')
 const app = require('../app')
 
-const times = 100
+const times = 1000
 const url = 'http://localhost:3000'
 const users = app.dataSource.models.Users
 
@@ -11,6 +12,7 @@ users
     .then( () => {
 
         console.time("Tempo de execução dos testes: ")
+        const startTest = new Date()
 
         let promisses = []
         let defaultUser = {
@@ -91,6 +93,11 @@ users
                                     .then( () => {
 
                                         console.timeEnd("Tempo de execução dos testes: ")
+
+                                        const endTest = new Date()
+
+                                        fs.appendFileSync('tempoTestes.txt', `${endTest - startTest}\n`)
+
                                         process.exit()
                                     })
                             })
