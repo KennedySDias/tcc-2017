@@ -4,25 +4,25 @@ const UsersController = require('../controllers/users')
 // let countPost = 0;
 function registerPost(memory) {
     // countPost++
-    fs.appendFileSync('registrosMemoriaPost.txt', `${memory}\n`)
+    fs.appendFileSync('./registers/registrosMemoriaPost.txt', `${memory}\n`)
 }
 
 // let countGet = 0;
 function registerGet(memory) {
     // countGet++
-    fs.appendFileSync('registrosMemoriaGet.txt', `${memory}\n`)
+    fs.appendFileSync('./registers/registrosMemoriaGet.txt', `${memory}\n`)
 }
 
 // let countPut = 0;
 function registerPut(memory) {
     // countPut++
-    fs.appendFileSync('registrosMemoriaPut.txt', `${memory}\n`)
+    fs.appendFileSync('./registers/registrosMemoriaPut.txt', `${memory}\n`)
 }
 
 // let countDelete = 0;
 function registerDelete(memory) {
     // countDelete++
-    fs.appendFileSync('registrosMemoriaDelete.txt', `${memory}\n`)
+    fs.appendFileSync('./registers/registrosMemoriaDelete.txt', `${memory}\n`)
 }
 
 module.exports = app => {

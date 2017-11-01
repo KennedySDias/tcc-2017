@@ -96,7 +96,7 @@ users
 
                                         const endTest = new Date()
 
-                                        fs.appendFileSync('tempoTestes.txt', `${endTest - startTest}\n`)
+                                        fs.appendFileSync('./registers/tempoTestes.txt', `${endTest - startTest}\n`)
 
                                         process.exit()
                                     })
