@@ -4,8 +4,10 @@
   "description": "tcc-2017",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test/users.js"
+    "start-v8": "./nodejs_v8/node-v8.6.0-linux-x64/bin/node api/index.js",
+    "test-v8": "./nodejs_v8/node-v8.6.0-linux-x64/bin/node testes/index.js",
+    "start-chakracore": "./nodejs_chakracore/node-v8.6.0-linux-x64/bin/node api/index.js",
+    "test-chakracore": "./nodejs_chakracore/node-v8.6.0-linux-x64/bin/node testes/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,6 @@
     "mongoose": "^4.12.2"
   },
   "devDependencies": {
-    "request": "^2.83.0",
     "requestify": "^0.2.5"
   }
 }
