@@ -31,6 +31,7 @@
       <find>app</find>
       <find>registerDelete</find>
       <find>http-status</find>
+      <find>parse</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -68,18 +69,18 @@
         <option value="$PROJECT_DIR$/registers/registrosMemoriaPost.txt" />
         <option value="$PROJECT_DIR$/registers/registrosMemoriaPut.txt" />
         <option value="$PROJECT_DIR$/registers/tempoTestes.txt" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/resultados/v8/teste-1/registrosMemoriaPost.txt" />
+        <option value="$PROJECT_DIR$/resultados/calcula_media.js" />
         <option value="$PROJECT_DIR$/api/routes/users.js" />
         <option value="$PROJECT_DIR$/testes/index.js" />
-        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/resultados/resultados_finais.txt" />
+        <option value="$PROJECT_DIR$/resultados/calcula_medias.js" />
         <option value="$PROJECT_DIR$/api/registers/registrosMemoriaDelete.txt" />
         <option value="$PROJECT_DIR$/api/registers/registrosMemoriaGet.txt" />
         <option value="$PROJECT_DIR$/api/registers/registrosMemoriaPost.txt" />
         <option value="$PROJECT_DIR$/api/registers/registrosMemoriaPut.txt" />
         <option value="$PROJECT_DIR$/api/registers/tempoTestes.txt" />
-        <option value="$PROJECT_DIR$/resultados/v8/teste-1/registrosMemoriaPost.txt" />
-        <option value="$PROJECT_DIR$/resultados/calcula_media.js" />
-        <option value="$PROJECT_DIR$/resultados/calcula_medias.js" />
-        <option value="$PROJECT_DIR$/resultados/resultados_finais.txt" />
       </list>
     </option>
   </component>
@@ -95,7 +96,7 @@
     <handled-path value="$PROJECT_DIR$/nodejs_v8/node-v8.6.0-linux-x64/lib/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="412" />
+    <option name="y" value="25" />
     <option name="width" value="1366" />
     <option name="height" value="743" />
   </component>
@@ -117,8 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,32 +133,39 @@
             <path>
               <item name="tcc-2017" type="b2602c69:ProjectViewProjectNode" />
               <item name="tcc-2017" type="462c0819:PsiDirectoryNode" />
-              <item name="testes" type="462c0819:PsiDirectoryNode" />
+              <item name="resultados" type="462c0819:PsiDirectoryNode" />
+              <item name="chakracore" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v8.5.0/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/index.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api" />
       <recent name="$PROJECT_DIR$/registers" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/test/requests" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resultados/v8/teste-3" />
+      <recent name="$PROJECT_DIR$/resultados/v8/teste-2" />
+      <recent name="$PROJECT_DIR$/resultados/v8/teste-1" />
+      <recent name="$PROJECT_DIR$/resultados/chakracore/teste-3" />
+      <recent name="$PROJECT_DIR$/resultados/chakracore/teste-2" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -233,23 +239,23 @@
       <workItem from="1509642413382" duration="418000" />
       <workItem from="1509666361911" duration="904000" />
       <workItem from="1509808049133" duration="7090000" />
+      <workItem from="1509993545772" duration="9341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72807000" />
+    <option name="totallyTimeSpent" value="82148000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="412" width="1366" height="743" extended-state="6" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20104244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23529412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68896323" sideWeight="0.50298065" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68896323" sideWeight="0.49701938" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18107302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2068404" sideWeight="0.49701938" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8013029" sideWeight="0.49701938" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -257,6 +263,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6070234" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18107302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -280,48 +287,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/config/configDataBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -487,60 +452,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-828">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/registers/registrosMemoriaDelete.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/registers/registrosMemoriaGet.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/registers/registrosMemoriaPost.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/registers/tempoTestes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/registers/registrosMemoriaPut.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resultados/v8/teste-1/registrosMemoriaPut.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -548,85 +463,196 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17359">
           <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultados/chakracore/teste-1/tempoTestes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultados/chakracore/teste-2/tempoTestes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultados/v8/teste-1/tempoTestes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultados/v8/teste-2/tempoTestes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultados/v8/teste-3/tempoTestes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+        <state relative-caret-position="328">
+          <caret line="98" column="118" lean-forward="true" selection-start-line="98" selection-start-column="118" selection-end-line="98" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultados/chakracore/teste-3/tempoTestes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resultados/resultados_finais.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#registerPost#0" expanded="false" />
+            <element signature="n#!!block;n#registerGet#0" expanded="false" />
+            <element signature="n#!!block;n#registerPut#0" expanded="false" />
+            <element signature="n#!!block;n#registerDelete#0" expanded="false" />
+            <element signature="e#1241#1296#0" expanded="false" />
+            <element signature="e#1906#1961#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/registers/registrosMemoriaDelete.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/registers/registrosMemoriaGet.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/registers/registrosMemoriaPost.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/registers/registrosMemoriaPut.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/registers/tempoTestes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resultados/calcula_medias.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="27" />
+        <state relative-caret-position="-14">
+          <caret line="107" column="6" lean-forward="true" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
           <folding>
             <element signature="n#!!block;n#convertToMegabytes#0" expanded="false" />
             <element signature="n#!!block;n#calc#0" expanded="false" />
-            <element signature="e#210#284#0" expanded="false" />
-            <element signature="e#490#1869#0" expanded="false" />
-            <element signature="e#550#833#0" expanded="false" />
-            <element signature="e#646#825#0" expanded="false" />
-            <element signature="e#669#724#0" expanded="false" />
-            <element signature="e#767#814#0" expanded="false" />
-            <element signature="e#893#1175#0" expanded="false" />
-            <element signature="e#988#1167#0" expanded="false" />
-            <element signature="e#1011#1066#0" expanded="false" />
-            <element signature="e#1109#1156#0" expanded="false" />
-            <element signature="e#1235#1517#0" expanded="false" />
-            <element signature="e#1330#1509#0" expanded="false" />
-            <element signature="e#1353#1408#0" expanded="false" />
-            <element signature="e#1451#1498#0" expanded="false" />
-            <element signature="e#1580#1865#0" expanded="false" />
-            <element signature="e#1678#1857#0" expanded="false" />
-            <element signature="e#1701#1756#0" expanded="false" />
-            <element signature="e#1799#1846#0" expanded="false" />
-            <element signature="e#1920#2187#0" expanded="false" />
-            <element signature="e#1983#2065#0" expanded="false" />
-            <element signature="e#2237#2503#0" expanded="false" />
-            <element signature="e#2300#2382#0" expanded="false" />
-            <element signature="e#2553#2819#0" expanded="false" />
-            <element signature="e#2616#2698#0" expanded="false" />
-            <element signature="e#2872#3141#0" expanded="false" />
-            <element signature="e#2935#3017#0" expanded="false" />
-            <element signature="e#3345#4788#0" expanded="false" />
-            <element signature="e#3413#3704#0" expanded="false" />
-            <element signature="e#3517#3696#0" expanded="false" />
-            <element signature="e#3540#3595#0" expanded="false" />
-            <element signature="e#3638#3685#0" expanded="false" />
-            <element signature="e#3772#4062#0" expanded="false" />
-            <element signature="e#3875#4054#0" expanded="false" />
-            <element signature="e#3898#3953#0" expanded="false" />
-            <element signature="e#3996#4043#0" expanded="false" />
-            <element signature="e#4130#4420#0" expanded="false" />
-            <element signature="e#4233#4412#0" expanded="false" />
-            <element signature="e#4256#4311#0" expanded="false" />
-            <element signature="e#4354#4401#0" expanded="false" />
-            <element signature="e#4491#4784#0" expanded="false" />
-            <element signature="e#4597#4776#0" expanded="false" />
-            <element signature="e#4620#4675#0" expanded="false" />
-            <element signature="e#4718#4765#0" expanded="false" />
-            <element signature="e#4847#5122#0" expanded="false" />
-            <element signature="e#4910#4992#0" expanded="false" />
-            <element signature="e#5180#5454#0" expanded="false" />
-            <element signature="e#5243#5325#0" expanded="false" />
-            <element signature="e#5512#5786#0" expanded="false" />
-            <element signature="e#5575#5657#0" expanded="false" />
-            <element signature="e#5847#6124#0" expanded="false" />
-            <element signature="e#5910#5992#0" expanded="false" />
+            <element signature="e#539#2243#0" expanded="false" />
+            <element signature="e#599#882#0" expanded="false" />
+            <element signature="e#695#874#0" expanded="false" />
+            <element signature="e#718#773#0" expanded="false" />
+            <element signature="e#816#863#0" expanded="false" />
+            <element signature="e#942#1224#0" expanded="false" />
+            <element signature="e#1037#1216#0" expanded="false" />
+            <element signature="e#1060#1115#0" expanded="false" />
+            <element signature="e#1158#1205#0" expanded="false" />
+            <element signature="e#1284#1566#0" expanded="false" />
+            <element signature="e#1379#1558#0" expanded="false" />
+            <element signature="e#1402#1457#0" expanded="false" />
+            <element signature="e#1500#1547#0" expanded="false" />
+            <element signature="e#1629#1914#0" expanded="false" />
+            <element signature="e#1727#1906#0" expanded="false" />
+            <element signature="e#1750#1805#0" expanded="false" />
+            <element signature="e#1848#1895#0" expanded="false" />
+            <element signature="e#2294#2561#0" expanded="false" />
+            <element signature="e#2357#2439#0" expanded="false" />
+            <element signature="e#2611#2877#0" expanded="false" />
+            <element signature="e#2674#2756#0" expanded="false" />
+            <element signature="e#2927#3193#0" expanded="false" />
+            <element signature="e#2990#3072#0" expanded="false" />
+            <element signature="e#3246#3515#0" expanded="false" />
+            <element signature="e#3309#3391#0" expanded="false" />
+            <element signature="e#3567#3847#0" expanded="false" />
+            <element signature="e#4106#5890#0" expanded="false" />
+            <element signature="e#4174#4465#0" expanded="false" />
+            <element signature="e#4278#4457#0" expanded="false" />
+            <element signature="e#4301#4356#0" expanded="false" />
+            <element signature="e#4399#4446#0" expanded="false" />
+            <element signature="e#4533#4823#0" expanded="false" />
+            <element signature="e#4636#4815#0" expanded="false" />
+            <element signature="e#4659#4714#0" expanded="false" />
+            <element signature="e#4757#4804#0" expanded="false" />
+            <element signature="e#4891#5181#0" expanded="false" />
+            <element signature="e#4994#5173#0" expanded="false" />
+            <element signature="e#5017#5072#0" expanded="false" />
+            <element signature="e#5115#5162#0" expanded="false" />
+            <element signature="e#5252#5545#0" expanded="false" />
+            <element signature="e#5358#5537#0" expanded="false" />
+            <element signature="e#5381#5436#0" expanded="false" />
+            <element signature="e#5479#5526#0" expanded="false" />
+            <element signature="e#5949#6224#0" expanded="false" />
+            <element signature="e#6012#6094#0" expanded="false" />
+            <element signature="e#6282#6556#0" expanded="false" />
+            <element signature="e#6345#6427#0" expanded="false" />
+            <element signature="e#6614#6888#0" expanded="false" />
+            <element signature="e#6677#6759#0" expanded="false" />
+            <element signature="e#6949#7226#0" expanded="false" />
+            <element signature="e#7012#7094#0" expanded="false" />
+            <element signature="e#7286#7574#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resultados/resultados_finais.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

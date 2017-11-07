@@ -31,11 +31,11 @@ module.exports = app => {
     app.route('/users')
         .post((req, res) => {
 
-            // console.log('/users - POST');
-            registerPost(process.memoryUsage().rss);
-
             usersController.save(req.body)
                 .then((response) => {
+
+                    registerPost(process.memoryUsage().rss);
+
                     res.status(response.statusCode)
                     res.json(response.data)
                 })
@@ -44,13 +44,14 @@ module.exports = app => {
     app.route('/users/:email')
         .get((req, res) => {
 
-            // console.log(`/users/${req.params.email} - GET: `);
-            registerGet(process.memoryUsage().rss);
 
             usersController.getbyEmail({
                 email: req.params.email
             })
                 .then((response) => {
+
+                    registerGet(process.memoryUsage().rss);
+
                     res.status(response.statusCode)
                     res.json(response.data)
                 })
@@ -58,24 +59,24 @@ module.exports = app => {
         })
         .put((req, res) => {
 
-            // console.log(`/users/${req.params.email} - PUT: `);
-            registerPut(process.memoryUsage().rss);
-
             usersController.update(req.params, req.body)
                 .then((response) => {
+
+                    registerPut(process.memoryUsage().rss);
+
                     res.status(response.statusCode)
                     res.json(response.data)
                 })
         })
         .delete((req, res) => {
 
-            // console.log(`/users/${req.params.email} - DELETE: `);
-            registerDelete(process.memoryUsage().rss);
-
             usersController.delete({
                 email: req.params.email
             })
                 .then((response) => {
+
+                    registerDelete(process.memoryUsage().rss);
+
                     res.status(response.statusCode)
                     res.json(response.data)
                 })

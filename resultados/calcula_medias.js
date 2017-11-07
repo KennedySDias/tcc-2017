@@ -3,7 +3,7 @@ const fs = require('fs')
 function convertToMegabytes(bytes) {
     return bytes / 1024 / 1024
 }
-function calc(data, calback) {
+function calc(data, callback) {
 
     data = data.split('\n')
 
@@ -13,15 +13,15 @@ function calc(data, calback) {
             total +=  parseInt(value)
     })
 
-    calback(total / (data.length - 2))
+    callback(total / (data.length - 2))
 }
 
-// ====================== V8
-
+// ============================================ V8
 let promissesV8Post = []
 let promissesV8Get = []
 let promissesV8Put = []
 let promissesV8Delete = []
+let promissesV8Tempo = []
 
 for (let i = 1 ; i <= 3; i++) {
     promissesV8Post.push(new Promise((resolve, reject) => {
@@ -72,6 +72,18 @@ for (let i = 1 ; i <= 3; i++) {
             })
         });
     }))
+    promissesV8Tempo.push(new Promise((resolve, reject) => {
+
+        fs.readFile(`./v8/teste-${i}/tempoTestes.txt`, 'utf8', function (err, data) {
+            if (err) {
+                return console.log(err)
+            }
+
+            data = data.replace('\n', '')
+
+            resolve(parseInt(data))
+        });
+    }))
 }
 
 Promise.all (promissesV8Post)
@@ -114,13 +126,23 @@ Promise.all (promissesV8Delete)
 
         fs.appendFileSync('./resultados_finais.txt', `V8 - Delete : [${data}] -> Média: ${total / data.length} \n`)
     })
+Promise.all (promissesV8Tempo)
+    .then( data => {
+        let total = 0
+        data.map( (value, position) => {
+            if (position < data.length)
+                total += value
+        })
 
-// ====================== ChakraCore
+        fs.appendFileSync('./resultados_finais.txt', `V8 - Tempo de execução : [${data}] -> Média: ${total / data.length} \n`)
+    })
 
+// ============================================ ChakraCore
 let promissesChakraCorePost = []
 let promissesChakraCoreGet = []
 let promissesChakraCorePut = []
 let promissesChakraCoreDelete = []
+let promissesChakraCoreTempo = []
 
 for (let i = 1 ; i <= 3; i++) {
     promissesChakraCorePost.push(new Promise((resolve, reject) => {
@@ -171,6 +193,18 @@ for (let i = 1 ; i <= 3; i++) {
             })
         });
     }))
+    promissesChakraCoreTempo.push(new Promise((resolve, reject) => {
+
+        fs.readFile(`./chakracore/teste-${i}/tempoTestes.txt`, 'utf8', function (err, data) {
+            if (err) {
+                return console.log(err)
+            }
+
+            data = data.replace('\n', '')
+
+            resolve(parseInt(data))
+        });
+    }))
 }
 
 Promise.all (promissesChakraCorePost)
@@ -212,4 +246,14 @@ Promise.all (promissesChakraCoreDelete)
         })
 
         fs.appendFileSync('./resultados_finais.txt', `ChakraCore - Delete : [${data}] -> Média: ${total / data.length} \n`)
+    })
+Promise.all (promissesChakraCoreTempo)
+    .then( data => {
+        let total = 0
+        data.map( (value, position) => {
+            if (position < data.length)
+                total += value
+        })
+
+        fs.appendFileSync('./resultados_finais.txt', `ChakraCore - Tempo de execução : [${data}] -> Média: ${total / data.length} \n`)
     })
