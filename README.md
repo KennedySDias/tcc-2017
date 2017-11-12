@@ -7,12 +7,12 @@ O ambiente de testes preparado para o estudo será composto apenas por uma máqu
 <p>...</p>
 <p>Para a implementação dos testes foi utilizado o módulo Requestify.js na versão 0.2.5. Ele é responsável por realizar requisições de forma simples à URLs e métodos específicos. Com ele foi construído uma bateria de testes que simula requisições de clientes à API de forma sequencial e automatizada, seguindo a ordem de:
     <table>
-        <tr>
-            <td>1 – 1000 requisições para criar um novo usuário.</td>
-            <td>2 – 1000 requisições para consultar todos os usuários.</td>
-            <td>3 – 1000 requisições para consultar um usuário pelo ID.</td>
-            <td>4 – 1000 requisições para atualizar os dados de um usuário pelo ID.</td>
-        </tr>
+        <td>
+            <tr>1 – 1000 requisições para criar um novo usuário.</tr>
+            <tr>2 – 1000 requisições para consultar todos os usuários.</tr>
+            <tr>3 – 1000 requisições para consultar um usuário pelo ID.</tr>
+            <tr>4 – 1000 requisições para atualizar os dados de um usuário pelo ID.</tr>
+        </td>
     <p>5 – 1000 requisições para deletar os dados de um usuário pelo ID.</p>
     </table>
 <p>...</p>
