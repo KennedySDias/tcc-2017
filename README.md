@@ -12,8 +12,8 @@ O ambiente de testes preparado para o estudo será composto apenas por uma máqu
             <td>1000 requisições para consultar todos os usuários.</td>
             <td>1000 requisições para consultar um usuário pelo ID.</td>
             <td>1000 requisições para atualizar os dados de um usuário pelo ID.</td>
+            <td>5 – 1000 requisições para deletar os dados de um usuário pelo ID.</td>
         </tr>
-    <p>5 – 1000 requisições para deletar os dados de um usuário pelo ID.</p>
     </table>
 <p>...</p>
 <p>A análise dos dados terá como objetivo encontrar qual JavaScript Engine demorou menos tempo para executar os testes e qual consumiu menos memória RAM, assim encontrar aquela que traz o melhor equilíbrio entre velocidade de resposta e consumo de recurso.</p>
