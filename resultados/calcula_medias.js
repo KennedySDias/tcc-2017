@@ -9,7 +9,8 @@ function calc(data, callback) {
 
     let total = 0
     data.map( (value, position) => {
-        if (position < 1000)
+        if (position >= 900 && position < 1000)
+        // if (position < 100)
             total +=  parseInt(value)
     })
 
