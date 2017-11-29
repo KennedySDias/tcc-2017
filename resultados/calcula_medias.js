@@ -1,4 +1,12 @@
 const fs = require('fs')
+const parts = 100
+const total = 1000
+
+let arrayParts = []
+let path = ""
+
+// Preenche o array para marcacao dos diretórios
+for (let i = 1; i <= parts; i++) arrayParts.push(i * total);
 
 function convertToMegabytes(bytes) {
     return bytes / 1024 / 1024
@@ -24,10 +32,9 @@ let promissesV8Put = []
 let promissesV8Delete = []
 let promissesV8Tempo = []
 
-for (let i = 1 ; i <= 3; i++) {
+for (let i = 0 ; i < parts; i++) {
     promissesV8Post.push(new Promise((resolve, reject) => {
-
-        fs.readFile(`./v8/teste-${i}/registrosMemoriaPost.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./v8/tests_${arrayParts[i]}/registrosMemoriaPost.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -39,7 +46,7 @@ for (let i = 1 ; i <= 3; i++) {
     }))
     promissesV8Get.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./v8/teste-${i}/registrosMemoriaGet.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./v8/tests_${arrayParts[i]}/registrosMemoriaGet.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -51,7 +58,7 @@ for (let i = 1 ; i <= 3; i++) {
     }))
     promissesV8Put.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./v8/teste-${i}/registrosMemoriaPut.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./v8/tests_${arrayParts[i]}/registrosMemoriaPut.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -63,7 +70,7 @@ for (let i = 1 ; i <= 3; i++) {
     }))
     promissesV8Delete.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./v8/teste-${i}/registrosMemoriaDelete.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./v8/tests_${arrayParts[i]}/registrosMemoriaDelete.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -75,7 +82,7 @@ for (let i = 1 ; i <= 3; i++) {
     }))
     promissesV8Tempo.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./v8/teste-${i}/tempoTestes.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./v8/tests_${arrayParts[i]}/tempoTestes.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -145,10 +152,10 @@ let promissesChakraCorePut = []
 let promissesChakraCoreDelete = []
 let promissesChakraCoreTempo = []
 
-for (let i = 1 ; i <= 3; i++) {
+for (let i = 0 ; i < parts; i++) {
     promissesChakraCorePost.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./chakracore/teste-${i}/registrosMemoriaPost.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./chakracore/tests_${arrayParts[i]}/registrosMemoriaPost.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -160,7 +167,7 @@ for (let i = 1 ; i <= 3; i++) {
     }))
     promissesChakraCoreGet.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./chakracore/teste-${i}/registrosMemoriaGet.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./chakracore/tests_${arrayParts[i]}/registrosMemoriaGet.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -172,7 +179,7 @@ for (let i = 1 ; i <= 3; i++) {
     }))
     promissesChakraCorePut.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./chakracore/teste-${i}/registrosMemoriaPut.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./chakracore/tests_${arrayParts[i]}/registrosMemoriaPut.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -184,7 +191,7 @@ for (let i = 1 ; i <= 3; i++) {
     }))
     promissesChakraCoreDelete.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./chakracore/teste-${i}/registrosMemoriaDelete.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./chakracore/tests_${arrayParts[i]}/registrosMemoriaDelete.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
@@ -196,7 +203,7 @@ for (let i = 1 ; i <= 3; i++) {
     }))
     promissesChakraCoreTempo.push(new Promise((resolve, reject) => {
 
-        fs.readFile(`./chakracore/teste-${i}/tempoTestes.txt`, 'utf8', function (err, data) {
+        fs.readFile(`./chakracore/tests_${arrayParts[i]}/tempoTestes.txt`, 'utf8', function (err, data) {
             if (err) {
                 return console.log(err)
             }
