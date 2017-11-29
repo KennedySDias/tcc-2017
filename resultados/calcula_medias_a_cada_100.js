@@ -11,16 +11,26 @@ for (let i = 1; i <= parts; i++) arrayParts.push(i * total);
 function convertToMegabytes(bytes) {
     return bytes / 1024 / 1024
 }
-
 function calc(data, callback) {
 
     data = data.split('\n')
 
     let total = 0
-    data.map((value, position) => {
-        if (position < 1000)
-        total += parseInt(value)
+    data.map( (value, position) => {
+        // if (position < 100)
+        // if (position >= 100 && position < 200)
+        // if (position >= 200 && position < 300)
+        // if (position >= 300 && position < 400)
+        // if (position >= 400 && position < 500)
+        // if (position >= 500 && position < 600)
+        // if (position >= 600 && position < 700)
+        // if (position >= 700 && position < 800)
+        // if (position >= 800 && position < 900)
+        if (position >= 900 && position < 1000)
+
+            total +=  parseInt(value)
     })
+
     callback(total / (data.length - 2))
 }
 
@@ -31,7 +41,7 @@ let promissesV8Put = []
 let promissesV8Delete = []
 let promissesV8Tempo = []
 
-for (let i = 0; i < parts; i++) {
+for (let i = 0 ; i < parts; i++) {
     promissesV8Post.push(new Promise((resolve, reject) => {
         fs.readFile(`./v8/tests_${arrayParts[i]}/registrosMemoriaPost.txt`, 'utf8', function (err, data) {
             if (err) {
@@ -93,65 +103,65 @@ for (let i = 0; i < parts; i++) {
     }))
 }
 
-Promise.all(promissesV8Post)
-    .then(data => {
+Promise.all (promissesV8Post)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `V8 - POST : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `V8 - POST : Média: ${total / data.length} \n`)
     })
-Promise.all(promissesV8Get)
-    .then(data => {
+Promise.all (promissesV8Get)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `V8 - GET : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `V8 - GET : Média: ${total / data.length} \n`)
     })
-Promise.all(promissesV8Put)
-    .then(data => {
+Promise.all (promissesV8Put)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `V8 - Put : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `V8 - Put : Média: ${total / data.length} \n`)
     })
-Promise.all(promissesV8Delete)
-    .then(data => {
+Promise.all (promissesV8Delete)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `V8 - Delete : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `V8 - Delete : Média: ${total / data.length} \n`)
     })
-Promise.all(promissesV8Tempo)
-    .then(data => {
+Promise.all (promissesV8Tempo)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `V8 - Tempo de execução : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `V8 - Tempo de execução : Média: ${total / data.length} \n`)
     })
 
-// ============================================ ChakraCore
+// // ============================================ ChakraCore
 let promissesChakraCorePost = []
 let promissesChakraCoreGet = []
 let promissesChakraCorePut = []
 let promissesChakraCoreDelete = []
 let promissesChakraCoreTempo = []
 
-for (let i = 0; i < parts; i++) {
+for (let i = 0 ; i < parts; i++) {
     promissesChakraCorePost.push(new Promise((resolve, reject) => {
 
         fs.readFile(`./chakracore/tests_${arrayParts[i]}/registrosMemoriaPost.txt`, 'utf8', function (err, data) {
@@ -214,53 +224,53 @@ for (let i = 0; i < parts; i++) {
     }))
 }
 
-Promise.all(promissesChakraCorePost)
-    .then(data => {
+Promise.all (promissesChakraCorePost)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `ChakraCore - POST : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `ChakraCore - POST : Média: ${total / data.length} \n`)
     })
-Promise.all(promissesChakraCoreGet)
-    .then(data => {
+Promise.all (promissesChakraCoreGet)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `ChakraCore - GET : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `ChakraCore - GET : Média: ${total / data.length} \n`)
     })
-Promise.all(promissesChakraCorePut)
-    .then(data => {
+Promise.all (promissesChakraCorePut)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `ChakraCore - Put : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `ChakraCore - Put : Média: ${total / data.length} \n`)
     })
-Promise.all(promissesChakraCoreDelete)
-    .then(data => {
+Promise.all (promissesChakraCoreDelete)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `ChakraCore - Delete : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `ChakraCore - Delete : Média: ${total / data.length} \n`)
     })
-Promise.all(promissesChakraCoreTempo)
-    .then(data => {
+Promise.all (promissesChakraCoreTempo)
+    .then( data => {
         let total = 0
-        data.map((value, position) => {
+        data.map( (value, position) => {
             if (position < data.length)
                 total += value
         })
 
-        fs.appendFileSync('./resultados_finais.txt', `ChakraCore - Tempo de execução : [${data}] -> Média: ${total / data.length} \n`)
+        fs.appendFileSync('./resultados_finais_a_cada_100.txt', `ChakraCore - Tempo de execução : Média: ${total / data.length} \n`)
     })
